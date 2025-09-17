@@ -51,7 +51,9 @@ echo -e "${GREEN}Ghostty has been installed successfully.${NC}"
 
 # symlink ghostty config
 rm -rf $HOME/.config/ghostty
-ln -s $SCRIPT_DIR/ghostty $HOME/.config/ghostty
+mkdir -p $HOME/.config/ghostty
+ln -s $SCRIPT_DIR/ghostty/config $HOME/.config/ghostty/config
+ln -s $ROOT_DIR/ghostty/themes $HOME/.config/ghostty/themes
 echo -e "${GREEN}Symlinked ghostty config to home directory.${NC}"
 
 # setting up flathub on flatpak
