@@ -1,0 +1,78 @@
+# This is the configuration file for Ghostty.
+#
+# This template file has been automatically created at the following
+# path since Ghostty couldn't find any existing config files on your system:
+#
+#   /home/jgrubb/.config/ghostty/config
+#
+# The template does not set any default options, since Ghostty ships
+# with sensible defaults for all options. Users should only need to set
+# options that they want to change from the default.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+# Config syntax crash course
+# ==========================
+# # The config file consists of simple key-value pairs,
+# # separated by equals signs.
+# font-family = Iosevka
+# window-padding-x = 2
+#
+# # Spacing around the equals sign does not matter.
+# # All of these are identical:
+# key=value
+# key= value
+# key =value
+# key = value
+#
+# # Any line beginning with a # is a comment. It's not possible to put
+# # a comment after a config option, since it would be interpreted as a
+# # part of the value. For example, this will have a value of "#123abc":
+# background = #123abc
+#
+# # Empty values are used to reset config keys to default.
+# key =
+#
+# # Some config options have unique syntaxes for their value,
+# # which is explained in the docs for that config option.
+# # Just for example:
+# resize-overlay-duration = 4s 200ms
+
+# Key bindings
+
+# unbound defaults
+keybind = super+ctrl+shift+plus=unbind
+keybind = super+ctrl+shift+up=unbind
+keybind = super+ctrl+shift+down=unbind
+keybind = super+ctrl+shift+right=unbind
+keybind = super+ctrl+shift+left=unbind
+keybind = super+ctrl+left_bracket=unbind
+keybind = super+ctrl+right_bracket=unbind
+
+keybind = ctrl+shift+alt+plus=equalize_splits
+keybind = ctrl+shift+alt+up=resize_split:up,10
+keybind = ctrl+shift+alt+down=resize_split:down,10
+keybind = ctrl+shift+alt+right=resize_split:right,10
+keybind = ctrl+shift+alt+left=resize_split:left,10
+keybind = ctrl+alt+left_bracket=goto_split:previous
+keybind = ctrl+alt+right_bracket=goto_split:next
+
+keybind = ctrl+k=clear_screen
+
+# Configuration
+
+font-family = "BitstromWera Nerd Font Mono"
+theme = "my-awesome-theme"
+shell-integration-features = "no-cursor"
+cursor-style = "block"
+cursor-opacity = 0.75
+background-opacity = 0.96
+
+link-url = true
+
+window-title-font-family = "BitstromWera Nerd Font Mono"
+window-subtitle = "working-directory"

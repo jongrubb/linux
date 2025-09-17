@@ -1,0 +1,62 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Use custom format
+format = """
+(\
+([{](bold light_pink) $git_branch$git_status [}](bold light_pink) )\
+([{](bold light_pink) $mise [}](bold light_pink) )\
+\n)\
+$directory( $username) $character"""
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+scan_timeout = 10
+
+# Disable the blank line at the start of the prompt
+add_newline = true
+
+palette = 'p'
+[palettes.p]
+black = '#13131a'
+light_pink = '#f26191'
+light_green = '#61f261'
+light_yellow = '#f2f261'
+light_orange = '#f2aa61'
+light_purple = '#f261f2'
+light_cyan = '#61f2c2'
+silver = '#bdbde6'
+grey = '#68688c'
+pink = '#f23091'
+green = '#29cc29'
+yellow = '#f2f230'
+orange = '#f29130'
+purple = '#cc29cc'
+cyan = '#00f29d'
+white = '#f2f2ff'
+fg = '#66cc52'
+
+[directory]
+home_symbol = "🏡"
+truncation_symbol = "…/"
+style = 'orange'
+format = '[$path]($style)[$read_only]($read_only_style)'
+repo_root_style = 'silver'
+repo_root_format = '[🖿 $repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style)'
+
+[character]
+success_symbol = '[\$](bold green)'
+error_symbol = '[\$](bold pink)'
+
+[git_branch]
+format = '[$symbol](purple)[$branch(:$remote_branch)](orange) '
+
+[git_status]
+style = 'bold purple'
+format = '([$all_status$ahead_behind]($style))'
+
+[mise]
+disabled = false
+healthy_symbol = "💜"
+unhealthy_symbol = "💔"
+style = "orange"
+format = "[$symbol]($style)$health"
