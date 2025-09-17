@@ -9,6 +9,9 @@ format = """
 \n)\
 $directory( $username) $character"""
 
+right_format = """
+$time"""
+
 # Wait 10 milliseconds for starship to check files under the current directory.
 scan_timeout = 10
 
@@ -60,3 +63,8 @@ healthy_symbol = "💜"
 unhealthy_symbol = "💔"
 style = "orange"
 format = "[$symbol]($style)$health"
+
+[time]
+disabled = false
+style = "grey"
+format = "[$time]($style)"
