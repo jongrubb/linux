@@ -7,7 +7,7 @@ format = """
 ([{](bold light_pink) $git_branch$git_status [}](bold light_pink) )\
 ([{](bold light_pink) $mise [}](bold light_pink) )\
 \n)\
-$directory( $username) $character"""
+[🟓](light_pink) $directory( $username) $character"""
 
 right_format = """
 $time"""
@@ -44,7 +44,7 @@ truncation_symbol = "…/"
 style = 'orange'
 format = '[$path]($style)[$read_only]($read_only_style)'
 repo_root_style = 'silver'
-repo_root_format = '[🖿 $repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style)'
+repo_root_format = '[🖿  $repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style)'
 
 [character]
 success_symbol = '[\$](bold green)'
