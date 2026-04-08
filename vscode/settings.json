@@ -1,0 +1,32 @@
+{
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.lineHeight": 1.2,
+  "editor.formatOnPaste": true,
+  "terminal.integrated.cursorBlinking": true,
+  "editor.tabSize": 2,
+  "files.autoSave": "afterDelay",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.stickyScroll.enabled": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.persistentSessionScrollback": 10000,
+  "terminal.integrated.scrollback": 10000,
+  "editor.renderWhitespace": "all",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.rulers": [
+    120
+  ],
+  "eslint.format.enable": true,
+  "git.inputValidation": true,
+  "editor.formatOnSave": true,
+  "githubPullRequests.pullBranch": "never",
+  "workbench.colorTheme": "Dark Modern"
+}
