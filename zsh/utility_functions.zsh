@@ -15,6 +15,13 @@ function cd-root() {
   cd "$home"
 }
 
+function idea() {
+  args=("$@")
+  (( $# == 0 )) && args=(.)
+
+  command idea "${args[@]}" > /dev/null 2>&1 &
+}
+
 # Prints out help dialogue for all utility functions.
 function utilities:help() {
   zsh-help ${(%):-%x}
