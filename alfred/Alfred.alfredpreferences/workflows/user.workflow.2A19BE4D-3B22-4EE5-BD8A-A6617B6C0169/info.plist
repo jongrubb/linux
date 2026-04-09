@@ -90,7 +90,9 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>ls -m ~/github</string>
+				<string>find ~/github -maxdepth 3 -type d -name ".git" | while read git_dir; do
+  echo "${git_dir:h}"
+done</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -178,13 +180,19 @@ function run() {
 	const projects = $.getenv("projects")
 
 	const mappedResult = projects
-		.split(',')
+		.split("\n")
 		.map(s =&gt; s.trim())
-		.map(s =&gt; ({
-			"uid": s,
-			"title": s,
-			"arg": s
-		}));
+		.filter(s =&gt; !!s)
+		.map(s =&gt; {
+			console.log(s, s.split("/github/")[1]);
+			const [baseDir, repoName] = s.split("/github/")[1].split("/");
+
+			return {
+				"uid": s,
+				"title": baseDir + ": " + repoName,
+				"arg": s
+			}
+		});
 	console.log(mappedResult);
 	return JSON.stringify({"items": mappedResult});
 }</string>
@@ -216,9 +224,9 @@ function run() {
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>source ~/.zshrc
+				<string>source $ZDOTDIR/.zshrc
 
-nohup idea ~/github/$selected_project &gt; /dev/null 2&gt;&amp;1 &amp;</string>
+nohup idea $selected_project</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>

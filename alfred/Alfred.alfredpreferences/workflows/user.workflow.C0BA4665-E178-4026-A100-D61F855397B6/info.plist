@@ -60,9 +60,8 @@
 				<integer>102</integer>
 				<key>script</key>
 				<string>source ~/.zshrc 
-cd ~/alfred;
-pwd;
-tsx ./scripts/in-expression-translation | pbcopy;</string>
+cd $ALFRED_WORKFLOW_SCRIPTS_DIR/alfred;
+tsx ./src/in-expression-translation | pbcopy;</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -85,9 +84,9 @@ tsx ./scripts/in-expression-translation | pbcopy;</string>
 		<key>73DBBDEE-E4EF-47EE-871A-44573F1A5D19</key>
 		<dict>
 			<key>xpos</key>
-			<real>315</real>
+			<real>335</real>
 			<key>ypos</key>
-			<real>380</real>
+			<real>300</real>
 		</dict>
 		<key>761FD8E8-B4FF-4AE8-B1E9-F6BA4542FA24</key>
 		<dict>

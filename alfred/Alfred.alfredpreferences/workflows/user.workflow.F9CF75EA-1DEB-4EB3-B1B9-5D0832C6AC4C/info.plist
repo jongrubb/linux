@@ -60,9 +60,8 @@
 				<integer>102</integer>
 				<key>script</key>
 				<string>source ~/.zshrc 
-cd ~/alfred;
-pwd;
-tsx ./scripts/tsv-to-sql-insert | pbcopy;</string>
+cd $ALFRED_WORKFLOW_SCRIPTS_DIR;
+tsx ./src/tsv-to-sql-insert | pbcopy;</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>

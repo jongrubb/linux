@@ -90,7 +90,9 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>ls -m ~/github</string>
+				<string>find ~/github -maxdepth 3 -type d -name ".git" | while read git_dir; do
+  echo "${git_dir:h}"
+done</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -178,13 +180,19 @@ function run() {
 	const projects = $.getenv("projects")
 
 	const mappedResult = projects
-		.split(',')
+		.split("\n")
 		.map(s =&gt; s.trim())
-		.map(s =&gt; ({
-			"uid": s,
-			"title": s,
-			"arg": s
-		}));
+		.filter(s =&gt; !!s)
+		.map(s =&gt; {
+			console.log(s, s.split("/github/")[1]);
+			const [baseDir, repoName] = s.split("/github/")[1].split("/");
+
+			return {
+				"uid": s,
+				"title": baseDir + ": " + repoName,
+				"arg": s
+			}
+		});
 	console.log(mappedResult);
 	return JSON.stringify({"items": mappedResult});
 }</string>
@@ -216,9 +224,9 @@ function run() {
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>source ~/.zshrc
+				<string>source $ZDOTDIR/.zshrc
 
-code -n ~/github/$selected_project</string>
+code -n $selected_project</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -299,16 +307,16 @@ code -n ~/github/$selected_project</string>
 			<key>note</key>
 			<string>get list of github projects</string>
 			<key>xpos</key>
-			<real>265</real>
+			<real>300</real>
 			<key>ypos</key>
-			<real>90</real>
+			<real>70</real>
 		</dict>
 		<key>E87BD660-2CA9-48AA-AC3B-E9B72502A7FA</key>
 		<dict>
 			<key>note</key>
 			<string>opening code</string>
 			<key>xpos</key>
-			<real>585</real>
+			<real>580</real>
 			<key>ypos</key>
 			<real>270</real>
 		</dict>
