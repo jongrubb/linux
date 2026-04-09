@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>connections</key>
+	<dict>
+		<key>04AA85DE-2C0E-4D99-A18C-15A03E885BC4</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BC376759-FF35-4ED1-B906-85EF1486D122</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>2304B030-B43B-4AA4-882B-AF6105960F49</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>04AA85DE-2C0E-4D99-A18C-15A03E885BC4</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>3CD5454C-F689-463F-A870-652B9D4B2892</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>2304B030-B43B-4AA4-882B-AF6105960F49</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6E91C69B-C957-4192-9CD2-BC6A70C0BD31</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A770A9C0-5BBC-46B1-8A4A-58E91D5013AB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A770A9C0-5BBC-46B1-8A4A-58E91D5013AB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3CD5454C-F689-463F-A870-652B9D4B2892</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string></string>
+	<key>description</key>
+	<string>Opens Intellij for a project</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Open Intellij</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>ls -m ~/github</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A770A9C0-5BBC-46B1-8A4A-58E91D5013AB</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>open intellij</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Open Intellij</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>6E91C69B-C957-4192-9CD2-BC6A70C0BD31</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>projects</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>3CD5454C-F689-463F-A870-652B9D4B2892</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<true/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>2</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>ObjC.import("stdlib")
+
+function run() {
+	const projects = $.getenv("projects")
+
+	const mappedResult = projects
+		.split(',')
+		.map(s =&gt; s.trim())
+		.map(s =&gt; ({
+			"uid": s,
+			"title": s,
+			"arg": s
+		}));
+	console.log(mappedResult);
+	return JSON.stringify({"items": mappedResult});
+}</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>7</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>2304B030-B43B-4AA4-882B-AF6105960F49</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>source ~/.zshrc
+
+nohup idea ~/github/$selected_project &gt; /dev/null 2&gt;&amp;1 &amp;</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>5</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>BC376759-FF35-4ED1-B906-85EF1486D122</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>selected_project</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>04AA85DE-2C0E-4D99-A18C-15A03E885BC4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>04AA85DE-2C0E-4D99-A18C-15A03E885BC4</key>
+		<dict>
+			<key>note</key>
+			<string>setting selected_project variable</string>
+			<key>xpos</key>
+			<real>375</real>
+			<key>ypos</key>
+			<real>290</real>
+		</dict>
+		<key>2304B030-B43B-4AA4-882B-AF6105960F49</key>
+		<dict>
+			<key>note</key>
+			<string>filter projects</string>
+			<key>xpos</key>
+			<real>150</real>
+			<key>ypos</key>
+			<real>270</real>
+		</dict>
+		<key>3CD5454C-F689-463F-A870-652B9D4B2892</key>
+		<dict>
+			<key>note</key>
+			<string>setting projects variable</string>
+			<key>xpos</key>
+			<real>550</real>
+			<key>ypos</key>
+			<real>110</real>
+		</dict>
+		<key>6E91C69B-C957-4192-9CD2-BC6A70C0BD31</key>
+		<dict>
+			<key>note</key>
+			<string>setup project keyword</string>
+			<key>xpos</key>
+			<real>80</real>
+			<key>ypos</key>
+			<real>90</real>
+		</dict>
+		<key>A770A9C0-5BBC-46B1-8A4A-58E91D5013AB</key>
+		<dict>
+			<key>note</key>
+			<string>get list of github projects</string>
+			<key>xpos</key>
+			<real>265</real>
+			<key>ypos</key>
+			<real>90</real>
+		</dict>
+		<key>BC376759-FF35-4ED1-B906-85EF1486D122</key>
+		<dict>
+			<key>note</key>
+			<string>opening intellij</string>
+			<key>xpos</key>
+			<real>515</real>
+			<key>ypos</key>
+			<real>290</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
