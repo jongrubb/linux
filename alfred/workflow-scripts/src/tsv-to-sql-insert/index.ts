@@ -26,6 +26,10 @@ function tsvToSqlInsert() {
   }
 
   const columns = rows[0];
+  if (!columns) {
+    throw new Error('Failed to extract columns from TSV data.');
+  }
+
   const parsedRows = rows.slice(1).filter(row => row.length === columns.length);
 
   const batchedDataRows: string[][][] = [];
