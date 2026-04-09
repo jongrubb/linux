@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string></string>
+	<key>connections</key>
+	<dict>
+		<key>761FD8E8-B4FF-4AE8-B1E9-F6BA4542FA24</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>73DBBDEE-E4EF-47EE-871A-44573F1A5D19</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string></string>
+	<key>description</key>
+	<string>takes TSV table data from clipboard and translates it to a SQL Insert</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>SQL: TSV Insert</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>SQL: TSV Insert</string>
+				<key>subtext</key>
+				<string>Takes TSV data on clipboard and translates it to a SQL insert</string>
+				<key>text</key>
+				<string>SQL: TSV Insert</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>761FD8E8-B4FF-4AE8-B1E9-F6BA4542FA24</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>source ~/.zshrc 
+cd ~/alfred;
+pwd;
+tsx ./scripts/tsv-to-sql-insert | pbcopy;</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>73DBBDEE-E4EF-47EE-871A-44573F1A5D19</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>73DBBDEE-E4EF-47EE-871A-44573F1A5D19</key>
+		<dict>
+			<key>xpos</key>
+			<real>315</real>
+			<key>ypos</key>
+			<real>380</real>
+		</dict>
+		<key>761FD8E8-B4FF-4AE8-B1E9-F6BA4542FA24</key>
+		<dict>
+			<key>xpos</key>
+			<real>30</real>
+			<key>ypos</key>
+			<real>290</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
