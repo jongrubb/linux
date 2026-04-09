@@ -28,5 +28,11 @@
   "git.inputValidation": true,
   "editor.formatOnSave": true,
   "githubPullRequests.pullBranch": "never",
-  "workbench.colorTheme": "Dark Modern"
+  "workbench.colorTheme": "Dark Modern",
+  "editor.fontFamily": "'BitstromWera Nerd Font Mono', monospace",
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontFamily": "'BitstromWera Nerd Font Mono', monospace",
+  "editor.cursorStyle": "block",
+  "editor.cursorBlinking": "solid",
+  "editor.cursorOpacity": 0.75
 }
