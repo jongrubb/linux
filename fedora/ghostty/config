@@ -66,6 +66,11 @@ keybind = ctrl+k=clear_screen
 # Configuration
 
 font-family = "BitstromWera Nerd Font Mono"
+font-family-bold = "BitstromWera Nerd Font Mono Bold" 
+font-family-italic = "BitstromWera Nerd Font Mono Oblique"
+font-family-bold-italic = "BitstromWera Nerd Font Mono Bold Oblique"
+font-codepoint-map = U+25CA-U+FFFF,U+F0000-U+F1AF0=BitstromWera Nerd Font
+
 theme = "my-awesome-theme"
 shell-integration-features = "no-cursor"
 cursor-style = "block"
