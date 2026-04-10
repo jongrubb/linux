@@ -85,6 +85,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>open intellij</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Open Intellij</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>6E91C69B-C957-4192-9CD2-BC6A70C0BD31</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -106,27 +127,6 @@ done</string>
 			<string>A770A9C0-5BBC-46B1-8A4A-58E91D5013AB</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>open intellij</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>Open Intellij</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>6E91C69B-C957-4192-9CD2-BC6A70C0BD31</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -226,7 +226,7 @@ function run() {
 				<key>script</key>
 				<string>source $ZDOTDIR/.zshrc
 
-nohup idea $selected_project</string>
+idea $selected_project</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
