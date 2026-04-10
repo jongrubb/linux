@@ -7,7 +7,7 @@
   "terminal.integrated.cursorBlinking": true,
   "editor.tabSize": 2,
   "files.autoSave": "afterDelay",
-  "typescript.updateImportsOnFileMove.enabled": "always",
+  "js/ts.updateImportsOnFileMove.enabled": "always",
   "editor.stickyScroll.enabled": true,
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -27,10 +27,16 @@
   "eslint.format.enable": true,
   "git.inputValidation": true,
   "editor.formatOnSave": true,
-  "githubPullRequests.pullBranch": "never",
   "workbench.colorTheme": "Dark Modern",
   "editor.fontFamily": "'BitstromWera Nerd Font Mono', monospace",
   "editor.fontLigatures": true,
   "terminal.integrated.fontFamily": "'BitstromWera Nerd Font Mono', monospace",
-  "editor.cursorOpacity": 0.75
+  "scm.inputFontFamily": "'BitstromWera Nerd Font Mono', monospace",
+  "scm.inputFontSize": 11,
+  "[scminput]": {
+    "editor.rulers": [
+      50,
+      72
+    ]
+  }
 }
