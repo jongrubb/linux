@@ -19,7 +19,7 @@ function idea() {
   args=("$@")
   (( $# == 0 )) && args=(.)
 
-  command idea "${args[@]}" > /dev/null 2>&1 &
+  command nohup idea "${args[@]}" > /dev/null 2>&1 &
 }
 
 # Prints out help dialogue for all utility functions.
