@@ -21,9 +21,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.rulers": [
-    120
-  ],
+  "editor.rulers": [120],
   "eslint.format.enable": true,
   "git.inputValidation": true,
   "editor.formatOnSave": true,
@@ -34,9 +32,6 @@
   "scm.inputFontFamily": "'BitstromWera Nerd Font Mono', monospace",
   "scm.inputFontSize": 11,
   "[scminput]": {
-    "editor.rulers": [
-      50,
-      72
-    ]
+    "editor.rulers": [50, 72]
   }
 }

@@ -9,7 +9,7 @@ ssh-keygen -t ed25519 -C "work@email.com" -f ~/.ssh/id_ed25519_work
 
 add keys to ssh
 
-```
+```bash
 ssh-add ~/.ssh/id_ed25519_personal
 ssh-add ~/.ssh/id_ed25519_work
 ```
@@ -34,6 +34,7 @@ cat ~/.ssh/id_ed25519_work.pub
 Store git configs in `~/.config/git/`:
 
 **`~/.config/git/personal`**
+
 ```ini
 [user]
   name = Your Personal Name
@@ -44,6 +45,7 @@ Store git configs in `~/.config/git/`:
 ```
 
 **`~/.config/git/work`**
+
 ```ini
 [user]
   name = Your Work Name
@@ -54,6 +56,7 @@ Store git configs in `~/.config/git/`:
 ```
 
 **`~/.config/git/.gitconfig`** — add conditional includes:
+
 ```ini
 [includeIf "gitdir:~/github/personal/"]
   path = ~/.config/git/personal
@@ -67,22 +70,26 @@ Store git configs in `~/.config/git/`:
 ## 5. Install direnv
 
 **macOS:**
+
 ```bash
 brew install direnv
 ```
 
 **Linux:**
+
 ```bash
 curl -sfL https://direnv.net/install.sh | bash
 ```
 
 Hook into your shell — add to `~/.zshrc` or `~/.bashrc`:
+
 ```bash
 eval "$(direnv hook zsh)"   # zsh
 eval "$(direnv hook bash)"  # bash
 ```
 
 Reload your shell:
+
 ```bash
 source ~/.zshrc  # or ~/.bashrc
 ```
@@ -92,22 +99,26 @@ source ~/.zshrc  # or ~/.bashrc
 ## 6. Set Up GitHub Directories
 
 Create the directories:
+
 ```bash
 mkdir -p ~/github/personal
 mkdir -p ~/github/work
 ```
 
 **`~/github/personal/.envrc`**
+
 ```bash
 export GH_CONFIG_DIR=~/.config/gh-personal
 ```
 
 **`~/github/work/.envrc`**
+
 ```bash
 export GH_CONFIG_DIR=~/.config/gh-work
 ```
 
 Allow each `.envrc`:
+
 ```bash
 direnv allow ~/github/personal
 direnv allow ~/github/work

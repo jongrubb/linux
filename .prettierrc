@@ -1,0 +1,23 @@
+{
+  "singleQuote": true,
+  "trailingComma": "none",
+  "arrowParens": "avoid",
+  "pluginSearchDirs": ["."],
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx",
+        "*.mts",
+        "*.mtsx",
+        "*.cts",
+        "*.ctsx",
+        "*.json",
+        "*.mjs"
+      ],
+      "options": {
+        "printWidth": 120
+      }
+    }
+  ]
+}

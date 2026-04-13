@@ -37,10 +37,10 @@ async function main(): Promise<void> {
 
     const result = translateToInExpression(clipboardContent);
 
-    // eslint-disable-next-line no-console
+     
     console.info(result);
   } catch (error) {
-    // eslint-disable-next-line no-console
+     
     console.error('Error:', error);
     process.exit(1);
   }
