@@ -37,10 +37,8 @@ async function main(): Promise<void> {
 
     const result = translateToInExpression(clipboardContent);
 
-     
     console.info(result);
   } catch (error) {
-     
     console.error('Error:', error);
     process.exit(1);
   }

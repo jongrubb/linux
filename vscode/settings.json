@@ -15,11 +15,8 @@
   "terminal.integrated.persistentSessionScrollback": 10000,
   "terminal.integrated.scrollback": 10000,
   "editor.renderWhitespace": "all",
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
   },
   "editor.rulers": [120],
   "eslint.format.enable": true,
