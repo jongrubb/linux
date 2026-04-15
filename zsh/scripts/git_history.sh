@@ -17,7 +17,7 @@ TOTAL_COMMITS=0
 TOTAL_BRANCHES=0
 
 # Loop through all directories in ~/github
-for repo in ~/github/*/; do
+for repo in ~/github/*/*/; do
   # Check if it's a git repository
   if [ -d "$repo/.git" ]; then
     cd "$repo" || continue
