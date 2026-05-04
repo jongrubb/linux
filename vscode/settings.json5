@@ -1,0 +1,57 @@
+{
+  // Git Settigns
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.inputValidation": true,
+
+  "scm.inputFontFamily": "'BitstromWera Nerd Font Mono', monospace",
+  "scm.inputFontSize": 11,
+  "[scminput]": {
+    "editor.rulers": [50, 72]
+  },
+
+  // Theme
+  "workbench.colorTheme": "Dark Modern",
+
+  // Terminal Settings
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontFamily": "'BitstromWera Nerd Font Mono', monospace",
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.persistentSessionScrollback": 10000,
+  "terminal.integrated.scrollback": 10000,
+
+  // Editor Settings
+  "editor.fontFamily": "'BitstromWera Nerd Font Mono', monospace",
+  "editor.fontLigatures": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.stickyScroll.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "always"
+  },
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [120],
+
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "eslint.format.enable": true,
+
+  "files.autoSave": "afterDelay"
+}

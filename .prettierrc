@@ -13,10 +13,19 @@
         "*.cts",
         "*.ctsx",
         "*.json",
-        "*.mjs"
+        "*.mjs",
+        "*.json5"
       ],
       "options": {
         "printWidth": 120
+      }
+    },
+    {
+      "files": [
+        "*.json5"
+      ],
+      "options": {
+        "singleQuote": false
       }
     }
   ]
