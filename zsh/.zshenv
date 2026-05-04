@@ -2,3 +2,6 @@
 # ~/.zsh folder.
 export ZDOTDIR="$HOME/.zsh"
 # TODO: need to define JIRA_URL
+
+# The current git project's root directory.
+export PROJECT_ROOT=$(git rev-parse --show-toplevel 2>/dev/null)
