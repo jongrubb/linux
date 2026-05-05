@@ -104,6 +104,11 @@ function git:history() {
   $ZDOTDIR/scripts/git_history.sh $1
 }
 
+# Using the gh cli `runs gh pr view --web`, which opens the current branch's PR in a browser window.
+function git:view-pr() {
+  gh pr view --web
+}
+
 # Prints out help dialogue for all git functions.
 function git:help() {
   zsh-help ${(%):-%x}
